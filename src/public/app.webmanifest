@@ -64,6 +64,24 @@
       "sizes": "1365x715",
       "type": "image/png",
       "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshots/StoryApp_004.jpg",
+      "sizes": "718x1600",
+      "type": "image/jpg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "images/screenshots/StoryApp_005.jpg",
+      "sizes": "718x1600",
+      "type": "image/jpg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "images/screenshots/StoryApp_006.jpg",
+      "sizes": "718x1600",
+      "type": "image/jpg",
+      "form_factor": "narrow"
     }
   ],
   "shortcuts": [
