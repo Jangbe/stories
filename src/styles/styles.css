@@ -189,11 +189,11 @@ select:focus-visible,
   box-shadow: 0 0 0 4px var(--primary-shadow-color);
 }
 
-form > .form-control:not([hidden]) ~ .form-control:not([hidden]) {
+form>.form-control:not([hidden])~.form-control:not([hidden]) {
   margin-block-start: 30px;
 }
 
-form .form-control > :not([hidden]) ~ :not([hidden]) {
+form .form-control> :not([hidden])~ :not([hidden]) {
   margin-block-start: 10px;
 }
 
@@ -211,6 +211,7 @@ form .form-buttons {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -377,7 +378,7 @@ header {
   min-height: 70vh;
 }
 
-.main-content > :not([hidden]) ~ :not([hidden]) {
+.main-content> :not([hidden])~ :not([hidden]) {
   margin-block-start: 30px;
 }
 
@@ -417,6 +418,7 @@ header {
 .login-form__do-not-have-account {
   text-align: center;
 }
+
 /* END OF LOGIN, REGISTER PAGE */
 
 /* HOME PAGE */
@@ -512,6 +514,7 @@ header {
   background-color: var(--primary-color);
   color: var(--primary-text-color);
 }
+
 /* END OF HOME PAGE */
 
 /* DETAIL PAGE */
@@ -602,7 +605,7 @@ header {
   gap: 10px;
 }
 
-.tns-nav > [aria-controls] {
+.tns-nav>[aria-controls] {
   min-height: auto;
   min-width: auto;
   width: 10px;
@@ -612,9 +615,10 @@ header {
   border: 0;
 }
 
-.tns-nav > .tns-nav-active[aria-controls] {
+.tns-nav>.tns-nav-active[aria-controls] {
   background-color: var(--primary-color);
 }
+
 /* Tiny Slider */
 
 .story-detail__body {
@@ -658,6 +662,7 @@ header {
   align-items: center;
   gap: 10px;
 }
+
 /* END OF DETAIL PAGE */
 
 /* NEW STORY FORM */
@@ -687,7 +692,7 @@ header {
   padding: 30px 25px;
 }
 
-.new-form > .form-control > :not([hidden]) ~ :not([hidden]) {
+.new-form>.form-control> :not([hidden])~ :not([hidden]) {
   margin-block-start: 8px;
 }
 
@@ -700,9 +705,9 @@ header {
   font-size: 1rem;
 }
 
-.new-form__description__container > :not([hidden]) ~ :not([hidden]),
-.new-form__photo__container > :not([hidden]) ~ :not([hidden]),
-.new-form__location__container > :not([hidden]) ~ :not([hidden]) {
+.new-form__description__container> :not([hidden])~ :not([hidden]),
+.new-form__photo__container> :not([hidden])~ :not([hidden]),
+.new-form__location__container> :not([hidden])~ :not([hidden]) {
   margin-block-start: 10px;
 }
 
@@ -794,6 +799,7 @@ header {
   display: flex;
   gap: 10px;
 }
+
 /* END OF NEW STORY FORM */
 
 /* FOOTER */
@@ -813,4 +819,41 @@ footer {
 
 .copyright {
   text-align: center;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.error-container > h1 {
+  font-size: 6rem;
+  margin: 0;
+  color: #555;
+}
+
+.error-container > p {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.error-container > a {
+  text-decoration: none;
+  background-color: #555;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.error-container > a:hover {
+  background-color: #333;
 }

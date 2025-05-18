@@ -15,6 +15,7 @@ export function generateLoaderAbsoluteTemplate() {
 export function generateMainNavigationListTemplate() {
   return `
     <li><a id="story-list-button" class="story-list-button" href="#/">Daftar Cerita</a></li>
+    <li><a id="saved-story-list-button" class="saved-story-list-button" href="#/bookmark">Cerita Tersimpan</a></li>
   `;
 }
 
@@ -150,8 +151,49 @@ export function generateStoryDetailTemplate({
             <div id="map-loading-container"></div>
           </div>
         </div>
+
+        <hr>
   
+        <div class="story-detail__body__actions__container">
+          <h2>Aksi</h2>
+          <div class="story-detail__actions__buttons">
+            <div id="save-actions-container"></div>
+          </div>
+        </div>
+
       </div>
     </div>
+  `;
+}
+
+export function generateSubscribeButtonTemplate() {
+  return `
+    <button id="subscribe-button" class="btn subscribe-button">
+      Subscribe <i class="fas fa-bell"></i>
+    </button>
+  `;
+}
+
+export function generateUnsubscribeButtonTemplate() {
+  return `
+    <button id="unsubscribe-button" class="btn unsubscribe-button">
+      Unsubscribe <i class="fas fa-bell-slash"></i>
+    </button>
+  `;
+}
+
+export function generateSaveStoryButtonTemplate() {
+  return `
+    <button id="story-detail-save" class="btn btn-transparent">
+      Simpan status <i class="far fa-bookmark"></i>
+    </button>
+  `;
+}
+
+export function generateRemoveStoryButtonTemplate() {
+  return `
+    <button id="story-detail-remove" class="btn btn-transparent">
+      Buang status <i class="fas fa-bookmark"></i>
+    </button>
   `;
 }

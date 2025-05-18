@@ -4,6 +4,8 @@ import HomePage from '../pages/home/home-page';
 import StoryDetailPage from '../pages/story-detail/story-detail-page';
 import NewPage from '../pages/new/new-page';
 import { checkAuthenticatedRoute, checkUnauthenticatedRouteOnly } from '../utils/auth';
+import BookmarkPage from '../pages/bookmark/bookmark-page';
+import Misc404 from '../pages/misc/404';
 
 export const routes = {
   '/login': () => checkUnauthenticatedRouteOnly(new LoginPage()),
@@ -11,5 +13,8 @@ export const routes = {
 
   '/': () => checkAuthenticatedRoute(new HomePage()),
   '/new': () => checkAuthenticatedRoute(new NewPage()),
-  '/stories/:id': () => checkAuthenticatedRoute(new StoryDetailPage())
+  '/stories/:id': () => checkAuthenticatedRoute(new StoryDetailPage()),
+  '/bookmark': () => checkAuthenticatedRoute(new BookmarkPage()),
+
+  '/404': () => new Misc404()
 };

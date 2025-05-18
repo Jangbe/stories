@@ -48,6 +48,14 @@ export default class HomePage {
     }
 
     const html = stories.reduce((accumulator, story) => {
+      if (this.#map) {
+        const coordinate = [story.lat, story.lon];
+        const markerOptions = { alt: story.name };
+        const popupOptions = { content: story.description };
+
+        this.#map.addMarker(coordinate, markerOptions, popupOptions);
+      }
+
       return accumulator.concat(
         generateStoryItemTemplate(story),
       );
